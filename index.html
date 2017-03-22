@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Mario's To Go</title>
+		<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<link rel="stylesheet" href="./css/pizzaShop.css"> 
+	</head>
+	
+	<body>
+		<div class="container">
+		<div id="menuBG"><h1>Mario's Pizza Palace</h1>
+		<div class="imgContainer">
+			<img src="../PizzaPlace/img/marioReal.png" alt="Logo">
+		</div>
+		<div class="tagline">
+			<h2>Build Your Own Pizza!</h2>
+		</div>
+			<form id="frmMenu">
+				<div class="menu">
+					<h3>Size:</h3>
+					<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza ($6)<br>
+					<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza ($10)<br>
+					<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza ($14)<br>
+					<input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza ($16)<br>
+				</div>
+				<div class="menu">
+					<h3>Crust Style:</h3>
+					<input class="crust" type="radio" name="Crust" value="Plain Crust" checked> Plain Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Garlic Butter Crust"> Garlic Butter Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
+					<input class="crust" type="radio" name="Crust" value="House Special Crust"> House Special Crust<br>
+					<input class="crust" type="radio" name="Crust" value="Cheese Stuffed Crust"> Cheese Stuffed Crust (+$3)<br>
+				</div>
+				<div class="menu">
+					<h3>Sauce:</h3>
+					<input class="sauce" type="radio" name="Sauce" value="Marinara" checked> Marinara<br>
+					<input class="sauce" type="radio" name="Sauce" value="White Sauce"> White Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="Barbeque Sauce" > Barbeque Sauce<br>
+					<input class="sauce" type="radio" name="Sauce" value="No Sauce" > No Sauce<br>
+				</div>
+				<div class="menu">
+					<h3>Cheese:</h3>
+					<input class="cheese" type="radio" name="Cheese" value="Regular" checked> Regular Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Extra Cheese" > Extra Cheese (+$3)<br>
+				</div>
+				<div class="menu">
+					<h3>Meats:</h3>
+					<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
+					<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage <br>
+					<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br> 
+					<input class="meats" type="checkbox" name="Meat" value="Ground Beef"> Ground Beef<br>
+					<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
+					<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
+				</div>
+				<div class="menu">
+					<h3>Veggies:</h3>
+					<input class="veggies" type="checkbox" name="Veggies" value="Tomatoes"> Tomatoes<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Onions"> Onions <br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Olives"> Olives<br> 
+					<input class="veggies" type="checkbox" name="Veggies" value="Green Peppers"> Green Peppers<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Mushrooms"> Mushrooms<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Pineapple"> Pineapple<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Spinach"> Spinach<br>
+					<input class="veggies" type="checkbox" name="Veggies" value="Jalape&ntilde;o"> Jalape&ntilde;o<br>
+				</div>
+				<br><br>
+				<input id="btnOrder" class="controls" type="button" onclick="getReceipt()";"makeAppear()" 
+				value="Place Order">
+				<br><br>
+		
+		<!---This is where the total starts --->
+				
+				<div id="cart">
+					<div id="confirmOrder"><h3>You Ordered:</h3></div>
+					<div id="subTotal"><h3>Subtotal:</h3></div>
+					<div id="showText"></div>
+					<div id="showText2"></div>
+					<div id="totalPrice"><h3>Total Price:</h3></div>
+					<div id="totalPrice2"></div>
+				</div>
+				
+			</form>  
+		</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="./js/pizza.js"></script>
+	</body>
+</html>
