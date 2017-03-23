@@ -53,6 +53,8 @@ function getCrust(runningTotal,text1,text2) {
 	} else {
 		crustTotal = 0;
 	}
+	
+	
 	runningTotal = (runningTotal + crustTotal);
 	text2 = (text2 + crustTotal)+"<br>";
 	console.log(selectedCrust+" = $"+crustTotal+".00");
@@ -73,6 +75,8 @@ function getSauce(runningTotal,text1,text2) {
 			text1 = text1+selectedSauce+"<br>";
 		}
 	}
+	
+	
 	runningTotal = (runningTotal + sauceTotal);
 	text2 = (text2 + sauceTotal)+"<br>";
 	console.log(selectedSauce+" = $"+sauceTotal+".00");
@@ -99,6 +103,8 @@ function getCheese(runningTotal,text1,text2) {
 	} else {
 		cheeseTotal = 0;
 	}
+	
+	
 	runningTotal = (runningTotal + cheeseTotal);
 	text2 = (text2 + cheeseTotal)+"<br>";
 	console.log(selectedCheese+" = $"+cheeseTotal+".00");
@@ -114,25 +120,39 @@ function getCheese(runningTotal,text1,text2) {
 function getMeat(runningTotal,text1,text2) {
 	var meatTotal = 0;
 	var selectedMeat = [];
+	var meatSubtotal = [];
 	var meatArray = document.getElementsByClassName("meats");
 	for (var j = 0; j < meatArray.length; j++) {
 		if (meatArray[j].checked) {
 			selectedMeat.push(meatArray[j].value);
+			meatSubtotal.push(meatArray[j].length);
 			console.log("selected meat item: ("+meatArray[j].value+")");
+			console.log("selected meat price: ("+meatArray[j].length+")");
 			text1 = text1+meatArray[j].value+"<br>";
+			
+			if (meatSubtotal.length <=1) {
+				text2 = text2+0+"<br>";
+			} else {
+				text2 = text2+1+"<br>";
+			}
 		}
 	}
+		//This statement sets a value for confirmOrder and subTotal if no boxes are checked
 		if (selectedMeat.length === 0) {
 		text1 = text1+"No Meats"+"<br>";
+		text2 = text2+0+"<br>";
 		}		
+	
+	
 	var meatCount = selectedMeat.length;
 	if (meatCount > 1) {
 		meatTotal = (meatCount - 1);
 	} else {
 		meatTotal = 0;
 	}
+	
+	
 	runningTotal = (runningTotal + meatTotal);
-	text2 = (text2 + (meatTotal - meatCount))+"<br>";
 	console.log("total selected meat items: "+meatCount);
 	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
 	console.log("meat text1: "+text1);
@@ -146,28 +166,39 @@ function getMeat(runningTotal,text1,text2) {
 function getVeggies(runningTotal,text1,text2) {
 	var veggieTotal = 0;
 	var selectedVeggie = [];
+	var veggieSubtotal = [];
 	var veggieArray = document.getElementsByClassName("veggies");
 	for (var v = 0; v < veggieArray.length; v++) {
 		if (veggieArray[v].checked) {
 			selectedVeggie.push(veggieArray[v].value);
+			veggieSubtotal.push(veggieArray[v].length);
 			console.log("selected veggie item: ("+veggieArray[v].value+")");
+			console.log("selected veggie price: ("+veggieArray[v].length+")");
 			text1 = text1+veggieArray[v].value+"<br>";
+		
+			if (veggieSubtotal.length <=1) {
+				text2 = text2+0+"<br>";
+			} else {
+				text2 = text2+1+"<br>";
+			}
 		}
 	}
+
+	//This statement sets a value for confirmOrder and subTotal if no boxes are checked
 		if (selectedVeggie.length === 0) {
 			text1 = text1+"No Vegetables"+"<br>";
-		}		
+			text2 = text2+0+"<br>";
+		}			
+	
+		
 	var veggieCount = selectedVeggie.length;
 	if (veggieCount > 1) {
 		veggieTotal = (veggieCount - 1);
-			console.log("selected veggie item: ("+text2+veggieCount+")");
-			text2 = text2+1+"<br>";
+		
 	} else {
 		veggieTotal = 0;
-			console.log("selected veggie item: ("+text2+veggieCount+")");
-			text2 = text2+0+"<br>";
 	}
-	/*Don't touch anything Above This!!!*/
+	
 	
 	runningTotal = (runningTotal + veggieTotal);
 	console.log("total selected veggie items: "+veggieCount);
