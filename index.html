@@ -41,7 +41,7 @@
 				</div>
 				<div class="menu">
 					<h3>Cheese:</h3>
-					<input class="cheese" type="radio" name="Cheese" value="Regular" checked> Regular Cheese<br>
+					<input class="cheese" type="radio" name="Cheese" value="Regular Cheese" checked> Regular Cheese<br>
 					<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese<br>
 					<input class="cheese" type="radio" name="Cheese" value="Extra Cheese" > Extra Cheese (+$3)<br>
 				</div>
@@ -66,7 +66,7 @@
 					<input class="veggies" type="checkbox" name="Veggies" value="Jalape&ntilde;o"> Jalape&ntilde;o<br>
 				</div>
 				<br><br>
-				<input id="btnOrder" class="controls" type="button" onclick="getReceipt()";"makeAppear()" 
+				<input id="btnOrder" class="controls" type="button" onclick="getReceipt()"
 				value="Place Order">
 				<br><br>
 		
@@ -75,16 +75,22 @@
 				<div id="cart">
 					<div id="confirmOrder"><h3>You Ordered:</h3></div>
 					<div id="subTotal"><h3>Subtotal:</h3></div>
-					<div id="showText"></div>
-					<div id="showText2"></div>
 					<div id="totalPrice"><h3>Total Price:</h3></div>
-					<div id="totalPrice2"></div>
 				</div>
-				
 			</form>  
 		</div>
 		</div>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="./js/pizza.js"></script>
+		<script src="./js/pizzaChanges.js"></script>
+		
+		<!--This jQuery function makes the receipt appear after 1/10 second-->
+		<script>
+		 $('#btnOrder').click(function(){
+            $("#cart").animate({
+                    opacity:1                   
+            },.1);
+        });
+		</script>
 	</body>
 </html>
