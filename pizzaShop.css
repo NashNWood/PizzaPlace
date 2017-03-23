@@ -1,0 +1,209 @@
+.container {
+	opacity: .95
+}
+
+body {
+	background: url(../img/Peel.jpg);
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: block;
+	
+}
+
+#menuBG {
+	margin: 0% auto;
+	width: 800px;
+	height: 1400px;
+	border-radius: 25px;
+	padding: 1px 0px;
+	opacity: 1;
+}
+
+#menuBG>h1 {
+	text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+	font-variant: small-caps;
+	color: #ff0000;
+	letter-spacing: 3pt;
+	word-spacing: 18pt;
+	text-align: center;
+	font-size: 4.5em;
+	font-family: Georgia, serif;
+	line-height: 2;
+    font-weight: 500;
+	margin:  0px auto;
+	}
+
+.imgContainer {
+	display: block;
+    margin: auto;
+    width: 50%;
+}
+				
+.tagline {
+		width: 800px;
+		height: 40px;
+		text-align: center;
+		background-color: #ffd24d;
+		opacity: 0.90;
+		color: #ff0000;
+		border: solid 1px #990000;
+		border-radius: 5px;
+		margin: 35px auto 0px auto;
+		padding: 0px 0px 0px 0px;		
+	}
+	
+.tagline>h2 {
+	color: #FFF;
+	padding: 0 auto;
+	margin: 0 auto;
+	font-size: 30px;
+	background-color: rgba(252, 125, 7, 1);
+	border: solid 2px #FCB707;
+	border-radius: 5px 5px 0 0;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	text-align: center;
+}
+
+#frmMenu{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width:800px;
+	height:410px;
+	background-color: #ffd24d;
+	border: solid 1px #990000;
+	border-radius: 5px;
+	margin: 0px auto 0px auto;
+	text-align: center;
+	opacity: 0.90;
+	}
+
+.menu{
+	flex: 1 250px;
+	height:200px;
+	background-color: #ffd24d;
+	border: solid 2px #FCB707;
+	border-radius: 5px;
+	text-align: left;
+	margin: 0px auto;
+}
+
+.menu>H3 {
+	color: #fff;
+	padding: 0 auto;
+	margin: 0 auto 4px auto;
+	background-color: rgba(252, 125, 7, 1);
+	border-radius: 5px 5px 0 0;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	text-align: center;
+	font-family: verdana;
+	font-size: 18px;
+}
+
+#btnOrder{
+	width:160px;
+	height:60px;
+	color: #fff;
+	padding: 0 auto;
+	margin: 20px 0px 0px 640px;
+	background-color: #ffd24d;
+	border: solid 2px #FCB707;
+	border-radius: 5px;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	text-align: center;
+	font-family: verdana;
+	font-size: 24px;
+}
+
+#btnOrder:hover {
+	background-color: rgba(252, 125, 7, 1);
+	border: solid 1px #990000;
+	border-radius: 5px;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	text-align: center;
+	font-family: verdana;
+	font-size: 24px;
+	box-shadow: 0 0 0 1px #990000;
+	cursor: pointer;
+}
+
+.controls {
+	display: flex;
+    flex-direction: columns;
+    justify-content: space-between;
+	margin: 0 auto;
+	width: 550px;
+}
+
+.controls>.button {
+	flex: 1 150px;
+}
+
+.button>p {
+	text-align: center;
+	font-weight: bold;
+}
+
+#cart {
+	opacity: 0;
+	margin: 20px auto;
+	width: 800px;
+	height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+	background-color: #ffd24d;
+	border: solid 2px #FCB707;
+	border-radius: 5px;
+	text-align: left;
+}
+
+#confirmOrder {
+	color: #fff;
+	flex: 1 250px;
+	height: 50px;
+	width: 250px;
+	padding: 0 0 6px 30px;
+	background-color: rgba(252, 125, 7, 1);
+	border-radius: 5px 0 0 0;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	font-size: 18px;
+	font-family: verdana;
+	text-align: left;
+}
+
+
+#subTotal {
+	color: #fff;
+	flex: 1 250px;
+	height: 50px;
+	width: 250px;
+	padding: 0 0 6px 0px;
+	background-color: rgba(252, 125, 7, 1);
+	border-radius: 0 0 0 0;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	font-size: 18px;
+	font-family: verdana;
+	text-align: center;	
+}
+
+
+#totalPrice {
+	color: #fff;
+	flex: 1 250px;
+	height: 50px;
+	width: 250px;
+	padding: 0 0 6px 0px;
+	background-color: #ff0000;
+	border-radius: 0 5px 0 0;
+	text-shadow: 1.5px 1.5px 5px #ff0000, 1px 1px 5px #000;
+	font-size: 18px;
+	font-family: verdana;
+	text-align: center;	
+}
+
